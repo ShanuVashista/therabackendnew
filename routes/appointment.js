@@ -40,6 +40,7 @@ router.post("/appointment", validate([
 
 
 
+
 // router.post((req,response)=>{
 //         try {
 //             const {doctorID, time, date, aptType,email}= req.body;
