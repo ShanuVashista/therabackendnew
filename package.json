@@ -2,8 +2,15 @@
   "name": "theranet",
   "version": "1.0.0",
   "main": "./components/app.js",
+  "engines": {
+    "node" : "14.x"
+  },
   "scripts": {
     "serve": "nodemon ./components/app.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://pixelelitetechnologies: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@github.com/pixelelitetechnologies/therabackendnew.git"
   },
   "dependencies": {
     "bcrypt": "^5.0.1",

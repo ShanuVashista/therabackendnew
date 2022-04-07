@@ -9,16 +9,21 @@ const {validate} = require("../helpers/validation");
 // let num = 1;
 
 const handler = async(req,res)=>{
-    const {doctorID, time, date, aptType,email} = req.body;
+    const {doctorID, time, date, aptType,email, patientID, token, user_id} = req.body;
+
     // const appoin = await log.findOne({where:{email: email}});
     const appoin = await apt.create({
+        patientID,
         doctorID,
         time, 
         date,
         aptType,
-        email
+        email,
+        token,
+        user_id
 
     });
+    
     return res.json(success("successfully generated your appointment", appoin))
 }
 router.post("/appointment", validate([
